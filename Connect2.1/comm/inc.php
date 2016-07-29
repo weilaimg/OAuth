@@ -1,0 +1,2 @@
+<?php die('forbidden'); ?>
+{"appid":"101339552","appkey":"a0cab6c0145c2009ed9a5e1984732447","callback":";http://oauth.weilaimg.cn/callback.php","scope":"get_user_info","errorReport":true,"storageType":"file","host":"localhost","user":"root","password":"root","database":"test"}

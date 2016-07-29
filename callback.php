@@ -5,7 +5,7 @@ require_once('Connect2.1/qqConnectAPI.php');
 //请求AccessToken
 
 $oauth = new Oauth();
-$accesstoken = $oauth -> qq_callback();
+$accesstoken = $oauth -> qqcallback();
 
 $debug ($accesstoken);
 

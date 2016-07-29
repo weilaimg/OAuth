@@ -5,7 +5,7 @@
  * @copyright © 2013, Tencent Corporation. All rights reserved.
  */
 
-require_once(CLASS_PATH."ErrorCase.class.php");
+require_once(QQ_CONNECT_SDK_CLASS_PATH."ErrorCase.class.php");
 class Recorder{
     private static $data;
     private $inc;
@@ -15,9 +15,14 @@ class Recorder{
         $this->error = new ErrorCase();
 
         //-------读取配置文件
-        $incFileContents = file(ROOT."comm/inc.php");
-        $incFileContents = $incFileContents[1];
-        $this->inc = json_decode($incFileContents);
+        $this -> inc -> appid='101339552';
+        $this -> inc -> appkey='a0cab6c0145c2009ed9a5e1984732447';
+        $this -> inc -> callback='http://oauth.weilaimg.cn/callback.php';
+        $this -> inc -> scope = 'get_user_info';
+        $this -> inc -> errorReport = 'true';
+        $this -> inc -> storageType = 'file';
+
+
         if(empty($this->inc)){
             $this->error->showError("20001");
         }

@@ -16,10 +16,11 @@ require_once('Connect2.1/qqConnectAPI.php');
 		<a href="qqlogout.php">退出QQ</a>
 
 <?php
-	$qc = new QC($_COOKIE['qq_accesstoken'],isset($_COOKIE['openid']);
+
+	$qc = new QC($_COOKIE['qq_accesstoken'],$_COOKIE['openid']);
 	$userinfo = $qc -> get_user_info ();
 	debug ($userinfo);
 	
-}
+}?>
 </body>
 </html>

@@ -44,7 +44,6 @@ class Oauth{
             "state" => $state,
             "scope" => $scope
         );
-
         $login_url =  $this->urlUtils->combineURL(self::GET_AUTH_CODE_URL, $keysArr);
 
         header("Location:$login_url");
